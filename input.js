@@ -7,10 +7,10 @@ function getName() {
     if (firstName.value != "" || lastName.value != ""){
         location.replace("/dailyscreener.html");
         const fullName = `${firstName.value} ${lastName.value}`
-        sessionStorage.setItem("full name", fullName);
+        localStorage.setItem("full name", fullName);
     }
     else {
-        if (typeof sessionStorage.getItem("full name") != "undefined") {
+        if (typeof localStorage.getItem("full name") != "undefined") {
             location.replace("/dailyscreener.html");
         }
         else {
