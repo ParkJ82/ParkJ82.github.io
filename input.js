@@ -3,8 +3,12 @@ const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 buttonClick.addEventListener('click', getName);
 
+function isEmpty(str) {
+    return !str.trim().length;
+}
+
 function getName() {
-    if (firstName.value != "" || lastName.value != ""){
+    if (!isEmpty(firstName.value)) || !(isEmpty(lastName.value))){
         location.replace("/dailyscreener.html");
         const fullName = `${firstName.value} ${lastName.value}`
         localStorage.setItem("full name", fullName);
