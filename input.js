@@ -1,8 +1,10 @@
-const buttonClick = document.querySelector(".nameSubmit");
-const nameGenerator = document.getElementById("inputtedName");
+const buttonClick = document.querySelector(".generateButton");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
 buttonClick.addEventListener('click', getName);
 
 function getName() {
-    location.replace("/dailyscreener.html")
-    sessionStorage.setItem("full name", nameGenerator.value);
+    location.replace("C:/Users/qkrwj/Desktop/Computer%20Science/Chrome%20Extension/daily%20screener/dailyscreener.html");
+    const fullName = `${firstName.value} ${lastName.value}`
+    sessionStorage.setItem("full name", fullName);
 };
